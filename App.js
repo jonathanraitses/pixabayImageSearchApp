@@ -6,24 +6,58 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import config from './app/config.js';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const Context = React.createContext();
 
-type Props = {};
-export default class App extends Component<Props> {
+const { apiKey } = config;
+
+class MyProvider extends Component {
+  state = {
+    contextData: "default value",
+    dummy: "dummy data"
+  }
+
+  render() {
+    return (
+      <Context.Provider value={{
+        state: this.state,
+        changeContextData: () => this.setState({
+          contextData: this.state.contextData + ' changed',
+        }),
+      }}>
+        {this.props.children}
+      </Context.Provider>
+    )
+  }
+}
+export default class App extends Component {
+  render() {
+    return (
+      <MyProvider>
+        <View style={styles.container}>
+          <Child />
+        </View>
+      </MyProvider>
+    );
+  }
+}
+
+class Child extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Context.Consumer>
+          {(context) => (
+            <React.Fragment>
+              <Text style={styles.child}>{context.state.contextData}</Text>
+              <Text style={styles.child}>{context.state.dummy}</Text>
+              <Button onPress={context.changeContextData} title={"change contextData value"}/>
+            </React.Fragment>
+          )}
+        </Context.Consumer>
       </View>
     );
   }
@@ -37,13 +71,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  child: {
+    fontSize: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10,
   },
 });

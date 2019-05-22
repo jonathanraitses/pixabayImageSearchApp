@@ -14,7 +14,6 @@ This is the coding challenge for the Howl interview process.
 * [Technologies](#Technologies)
 * [Version History](#Version-History)
 * [Authors](#Authors)
-* [License](#License)
 
 <!-- toc -->
 
@@ -41,7 +40,20 @@ TBD
 
 ## Technologies
 
-* TBD
+* React
+* React-Native
+* React-Native-Gesture-Handler
+* React-Nativgation
+* React-Native-Size-Matters
+* React-Test-Renderer
+* Metro-React-Native-Babel-Preset
+* Axios
+* Babel
+* Babel-Jest
+* @babel/core
+* @babel/runtime
+* Babel-Plugin-Transfrom-Inline-Environment-Variables
+* Jest
 
 ## Version-History
 
@@ -49,13 +61,6 @@ TBD
     * Initial react-native build.
     * See [commit change](https://github.com/jonathan-raitses/Pixabay-Image-Search-App/commit/26f66789f0898a2b60d9c62438f254644eaa0dd8)
 
-## Authors
+## Author
 
 * **Jonathan Raitses** - [Jonathan-Raitses](https://github.com/jonathan-raitses)
-
-See also the list of [contributors](https://github.com/jonathan-raitses/Howl-Coding-Challenge/graphs/contributors) who participated in this project.
-
-
-## License
-
-This project is currently not licensed.
