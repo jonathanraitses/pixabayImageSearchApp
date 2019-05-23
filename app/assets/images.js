@@ -1,5 +1,5 @@
 const images = {
-      'rainbow-button': require('./images/rainbow-button.png')
+      'pixabay-logo': require('./images/pixabay-logo.png')
     }
     export default images
     
