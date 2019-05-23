@@ -1,49 +1,22 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import {
-  View,
-  StatusBar,
-} from 'react-native';
-import {
-  createStackNavigator,
   createAppContainer,
   SafeAreaView,
 } from 'react-navigation';
-import DetailsScreen from './app/views/details/DetailsScreen';
-import SearchScreen from './app/views/search/SearchScreen';
 import AppNavigator from './app/lib/router';
+import GlobalProvider from './app/providers/GlobalProvider';
 import styles from './app/styles/common';
 
-export default class App extends Component {
-  render() {
-    return (
-      <SafeAreaView style={styles.wrapper}>
-        <AppContainer />
-      </SafeAreaView>
-    );
-  }
-}
+// Doesn't need lifecycle hooks and state is provided in provider
+const App = () => (
+  <GlobalProvider>
+    <Fragment>
+      <SafeAreaView style={{ flex: 0, backgroundColor: 'red' }} />
+      <AppContainer />
+    </Fragment>
+  </GlobalProvider>
+);
 
 const AppContainer = createAppContainer(AppNavigator);
 
-// const RootStack = createStackNavigator(
-//   {
-//     Search: SearchScreen,
-//     Details: DetailsScreen,
-//   },
-//   {
-//     defaultNavigationOptions: {
-//       title: 'Search',
-//       headerTintColor: '#fff',
-//       headerStyle: {
-//         backgroundColor: '#000',
-//       },
-//     },
-//     navigationOptions: {
-//       tabBarLabel: 'Search!',
-//     },
-//     initialRouteName: 'Search',
-//   },
-// );
-
-// const Tabs = createBottomTabNavigator({ RootStack });
-// const AppContainer = createAppContainer(RootStack);
+export default App;

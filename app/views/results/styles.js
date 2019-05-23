@@ -6,7 +6,7 @@ const scaledStyles = ScaledSheet.create({
     paddingTop: '2%',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#007AFF',
+    backgroundColor: 'white',
   },
   title: {
     flex: 1,

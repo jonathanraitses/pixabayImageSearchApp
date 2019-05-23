@@ -4,14 +4,21 @@ import {
   Text,
   View,
   TouchableOpacity,
-  SafeAreaView,
 } from 'react-native';
-import styles from './styles';
+import { moderateScale } from 'react-native-size-matters';
 import Icon from '../../components/navIcon/NavIcon';
+import styles from './styles';
 
 export default class SearchScreen extends Component {
     static navigationOptions = {
       header: null,
+      tabBarIcon: ({ tintColor, focused }) => (
+        <Icon
+          name="search"
+          size={focused ? moderateScale(28) : moderateScale(22)}
+          color={tintColor}
+        />
+      ),
     }
 
     render() {
@@ -29,14 +36,3 @@ export default class SearchScreen extends Component {
       );
     }
 }
-
-SearchScreen.navigationOptions = {
-  tabBarIcon: ({ tintColor, focused }) => (
-    <Icon
-      name="search"
-      // size={styles.navigationIcon}
-      size={focused ? 28 : 22}
-      color={tintColor}
-    />
-  ),
-};

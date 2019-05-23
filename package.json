@@ -4,9 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios": "react-native run-ios",
-    "android": "react-native run-android",
-    "ipad": "react-native run-ios --simulator 'iPad Pro (12.9-inch) (12.1)'",
     "update-images": "node scripts/images.js",
     "devtools": "react-devtools",
     "lint": "eslint *.js **/*.js",

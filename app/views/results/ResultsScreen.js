@@ -4,18 +4,25 @@ import {
   View,
   Button,
 } from 'react-native';
-import styles from './styles';
+import { moderateScale } from 'react-native-size-matters';
 import Icon from '../../components/navIcon/NavIcon';
+import styles from './styles';
 
 export default class ResultsScreen extends Component {
     static navigationOptions = {
-      title: 'Results',
-      headerLeft: null,
+      header: null,
+      tabBarIcon: ({ tintColor, focused }) => (
+        <Icon
+          name="list"
+          size={focused ? moderateScale(28) : moderateScale(22)}
+          color={tintColor}
+        />
+      ),
     }
 
     render() {
       return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.container}>
           <Button
             title="Go to Results... again"
             onPress={() => this.props.navigation.navigate('Results')}
@@ -24,15 +31,3 @@ export default class ResultsScreen extends Component {
       );
     }
 }
-
-ResultsScreen.navigationOptions = {
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Icon
-        name="list"
-        // size={styles.navigationIcon}
-        size={focused ? 28 : 22}
-        color={tintColor}
-      />
-    ),
-  };
-  
