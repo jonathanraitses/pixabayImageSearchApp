@@ -4,10 +4,12 @@ import {
   View,
   Button,
 } from 'react-native';
+import styles from './styles';
+import Icon from '../../components/navIcon/NavIcon';
 
 export default class DetailsScreen extends Component {
     static navigationOptions = {
-      title: 'Details Page',
+      title: 'Details',
       headerLeft: null,
     }
 
@@ -22,3 +24,14 @@ export default class DetailsScreen extends Component {
       );
     }
 }
+
+DetailsScreen.navigationOptions = {
+  tabBarIcon: ({ tintColor, focused }) => (
+    <Icon
+      name="information-circle"
+      // size={styles.navigationIcon}
+      size={focused ? 28 : 22}
+      color={tintColor}
+    />
+  ),
+};

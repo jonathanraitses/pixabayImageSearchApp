@@ -7,6 +7,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import styles from './styles';
+import Icon from '../../components/navIcon/NavIcon';
 
 export default class SearchScreen extends Component {
     static navigationOptions = {
@@ -16,11 +17,9 @@ export default class SearchScreen extends Component {
     render() {
       return (
         <View style={styles.container}>
-          <SafeAreaView>
-            <View style={styles.title}>
-              <Text style={styles.header}>Search Screen</Text>
-            </View>
-          </SafeAreaView>
+          <View style={styles.title}>
+            <Text style={styles.header}>Search Screen</Text>
+          </View>
           <View>
             <TouchableOpacity onPress={() => this.props.navigation.navigate('Details')}>
               <Text style={styles.navButton}>Go To Details</Text>
@@ -30,3 +29,14 @@ export default class SearchScreen extends Component {
       );
     }
 }
+
+SearchScreen.navigationOptions = {
+  tabBarIcon: ({ tintColor, focused }) => (
+    <Icon
+      name="search"
+      // size={styles.navigationIcon}
+      size={focused ? 28 : 22}
+      color={tintColor}
+    />
+  ),
+};

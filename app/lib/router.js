@@ -9,6 +9,16 @@ const AppNavigator = createMaterialTopTabNavigator(
     Results: ResultsScreen,
     Details: DetailsScreen,
   },
+  {
+    tabBarOptions: {
+      activeTintColor: 'white',
+      inactiveTintColor: 'black',
+      showIcon: true,
+      style: {
+        backgroundColor: 'red',
+      },
+    },
+  },
 );
 
 export default AppNavigator;

@@ -6,30 +6,24 @@ import {
 import {
   createStackNavigator,
   createAppContainer,
+  SafeAreaView,
 } from 'react-navigation';
 import DetailsScreen from './app/views/details/DetailsScreen';
 import SearchScreen from './app/views/search/SearchScreen';
 import AppNavigator from './app/lib/router';
 import styles from './app/styles/common';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class App extends Component {
   render() {
     return (
-        <View style={{flex: 1}}>
-          <StatusBar
-            backgroundColor='red'
-            barStyle='light-content'
-          />
-          <View style={styles.header}>
-            <Icon name='ios-camera' size={28} color='white'/>
-            <Icon name='ios-menu' size={28} color='white'/>
-          </View>
-          <AppContainer />
-        </View>
+      <SafeAreaView style={styles.wrapper}>
+        <AppContainer />
+      </SafeAreaView>
     );
   }
 }
+
+const AppContainer = createAppContainer(AppNavigator);
 
 // const RootStack = createStackNavigator(
 //   {
@@ -53,5 +47,3 @@ export default class App extends Component {
 
 // const Tabs = createBottomTabNavigator({ RootStack });
 // const AppContainer = createAppContainer(RootStack);
-
-const AppContainer = createAppContainer(AppNavigator);

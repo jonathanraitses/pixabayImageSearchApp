@@ -4,10 +4,12 @@ import {
   View,
   Button,
 } from 'react-native';
+import styles from './styles';
+import Icon from '../../components/navIcon/NavIcon';
 
 export default class ResultsScreen extends Component {
     static navigationOptions = {
-      title: 'Results Page',
+      title: 'Results',
       headerLeft: null,
     }
 
@@ -22,3 +24,15 @@ export default class ResultsScreen extends Component {
       );
     }
 }
+
+ResultsScreen.navigationOptions = {
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Icon
+        name="list"
+        // size={styles.navigationIcon}
+        size={focused ? 28 : 22}
+        color={tintColor}
+      />
+    ),
+  };
+  
