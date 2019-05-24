@@ -2,6 +2,7 @@
 import React from 'react';
 import {
   View,
+  Button,
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import NavigationService from '../../modules/NavigationService';
@@ -18,7 +19,10 @@ const SearchScreen = props => (
       <View style={styles.container}>
         <ScreenTitle text="Input the image you want below and then hit submit." />
         <View style={styles.content}>
-          <QueryTextInput />
+          <View style={styles.search}>
+            <QueryTextInput />
+            <Button title="test"/>
+          </View>
         </View>
       </View>
     )}

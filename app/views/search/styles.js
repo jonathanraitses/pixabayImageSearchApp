@@ -12,6 +12,9 @@ const scaledStyles = ScaledSheet.create({
     flex: 2,
     alignItems: 'flex-start',
   },
+  search: {
+    flexDirection: 'row',
+  }
 });
 
 export default scaledStyles;

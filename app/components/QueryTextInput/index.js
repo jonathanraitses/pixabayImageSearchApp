@@ -7,17 +7,16 @@ import styles from './styles';
 import GlobalContext from '../../contexts/GlobalContext';
 
 const QueryTextInput = (props) => {
-  let { query, setQuery } = useContext(GlobalContext);
+  const { state, updateKey } = useContext(GlobalContext);
 
   return (
     <View style={styles.inputContainer}>
       <TextInput
         {...props}
-        style={styles.inputField}
+        style={styles.input}
         placeholder="Enter your query here."
-        placeholderStyle={styles.placeHolder}
-        //onChangeText={userInput => setQuery(userInput)}
-        value={query}
+        onChangeText={userInput => updateKey('query', userInput)}
+        value={state.query}
       />
     </View>
   );

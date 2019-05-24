@@ -17,7 +17,7 @@ const DetailsScreen = props => (
     {context => (
       <View style={styles.container}>
         { // TODO: Add switch and store if there is a problem with query state issue here if so.
-          context.state.results === null
+          context.state.docs === null
             ? <ScreenTitle text="Please search first." />
             : ''
         }

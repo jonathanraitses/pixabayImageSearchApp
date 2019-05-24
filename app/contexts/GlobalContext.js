@@ -12,48 +12,46 @@ export const GlobalConsumer = GlobalContext.Consumer;
 // GlobalProvider contains global state as a component.
 // Wraps entire application (root/App.js).
 export class GlobalProvider extends Component {
-    state = {
-      query: 'asd',
-      setQuery: this.setQuery,
-      queryPixabay: this.queryPixabay,
-      results: null,
-      currentImage: null,
-      details: null,
-    }
+  state = {
+    query: '',
+    queryPixabay: this.queryPixabay,
+    docs: null,
+    selectedImage: null,
+  }
 
-    // docs https://pixabay.com/api/docs/
-    // defaults to 20 images unless added per_page key in params
-    queryPixabay(query) {
-      axios.get('https://pixabay.com/api/', {
-        params: {
-          key: apiKey,
-          q: query,
-        },
-      })
-        .then((res) => {
-          this.setState({
-            results: res,
-          });
-          console.log(this.state.results);
-        })
-        .catch((err) => {
-          throw new Error('Error querying pixabay: ', err);
+  // docs https://pixabay.com/api/docs/
+  // defaults to 20 images unless added per_page key in params
+  queryPixabay(query) {
+    axios.get('https://pixabay.com/api/', {
+      params: {
+        key: apiKey,
+        q: query,
+      },
+    })
+      .then((res) => {
+        this.setState({
+          docs: res,
         });
-    }
-
-    setQuery(input) {
-      this.setState({
-        query: input,
+        console.log(this.state.docs);
+      })
+      .catch((err) => {
+        throw new Error('Error querying pixabay: ', err);
       });
-    }
+  }
 
-    render() {
-      return (
-        <GlobalContext.Provider value={{ state: this.state }}>
-          {this.props.children}
-        </GlobalContext.Provider>
-      );
-    }
+  render() {
+    return (
+      <GlobalContext.Provider value={{
+        state: this.state, 
+        updateKey: (key, value) => this.setState({
+          [key]: value
+        }),
+      }}
+      >
+        {this.props.children}
+      </GlobalContext.Provider>
+    );
+  }
 }
 
 export default GlobalContext;

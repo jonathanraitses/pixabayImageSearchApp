@@ -12,6 +12,8 @@ const scaledStyles = ScaledSheet.create({
     height: '40@ms',
     fontSize: '14@ms',
     backgroundColor: '#ffffff',
+    paddingLeft: 5,
+    paddingRight: 5,
   },
 });
 
