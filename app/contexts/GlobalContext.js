@@ -22,17 +22,21 @@ export class GlobalProvider extends Component {
     queryPixabay: this.queryPixabay,
     docs: [],
     selectedImage: {},
+    page: 1,
+    loading: false,
   }
   // TODO: seperate contexts.
   // query and queryPixabay / docs and selectedImage.
 
   // docs https://pixabay.com/api/docs/
   // defaults to 20 images unless added per_page key in params
-  queryPixabay(query) {
+  queryPixabay(query, page = 1) {
     return axios.get('https://pixabay.com/api/', {
       params: {
         key: apiKey,
         q: query,
+        per_page: 200,
+        page,
       },
     })
   }

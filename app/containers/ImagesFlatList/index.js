@@ -2,7 +2,6 @@
 import React, { useContext } from 'react';
 import {
   View,
-  Text,
   Image,
   FlatList,
   TouchableOpacity,
@@ -16,14 +15,15 @@ import styles from './styles';
 const ImageFlatList = (props) => {
   const { state, updateKey } = useContext(GlobalContext);
 
+  // instaniate ref
+  const flatList = React.createRef();
+
   return (
     <FlatList
+      ref={flatList}
       data={state.docs}
       renderItem={({ item }) => (
         <View style={styles.itemContainer}>
-          {/* clicking image will send item to state as currentImage and navigate to details
-          which will describe the selected image.
-          */}
           <TouchableOpacity
             onPress={
                   () => {
@@ -46,6 +46,33 @@ const ImageFlatList = (props) => {
       )}
       keyExtractor={(item, index) => `${item.id}`}
       ItemSeparatorComponent={() => <RenderSeparator />}
+      // onEndReached={
+      //   () => {
+      //     updateKey('page', state.page + 1);
+      //     state.queryPixabay(state.query, state.page + 1)
+      //       .then((res) => {
+      //       // gets new data from next page of query, sets page counter in state
+      //         updateKey('docs', res.data.hits);
+      //       })
+      //       .catch((err) => {
+      //         if (err) {
+      //         // end of the data
+      //         // not tested
+      //         }
+      //       });
+      //     // uses list ref to force user to top of page.
+      //     // should occur before onEndReached due to event queue, but cannot
+      //     // guarantee that new content will be at topby the time it works.
+      //     // issue is that ref only works on stateful components and hooks for functional.
+      //     flatList.getNode().scrollTo({
+      //       y: 0,
+      //       animated: true,
+      //     });
+      //   }
+      // }
+      initialNumToRender={8}
+      maxToRenderPerBatch={2}
+      onEndReachedThreshold={0.5}
     />
   );
 };

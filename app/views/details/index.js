@@ -19,6 +19,7 @@ const DetailsScreen = (props) => {
     <View style={styles.container}>
       <AvatarImage url={state.selectedImage.userImageURL} />
       <BoldDescription topic="Creator" description={state.selectedImage.user} />
+      <BoldDescription topic="Full Url" description={state.selectedImage.largeImageURL} />
       <BoldDescription topic="Views" description={state.selectedImage.views} />
       <BoldDescription topic="Likes" description={state.selectedImage.likes} />
       <BoldDescription topic="Favorites" description={state.selectedImage.favorites} />
