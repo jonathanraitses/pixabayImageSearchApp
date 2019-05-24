@@ -3,16 +3,22 @@ import {
   createAppContainer,
   SafeAreaView,
 } from 'react-navigation';
+import NavigationService from './app/modules/NavigationService';
 import AppNavigator from './app/lib/router';
-import GlobalProvider from './app/providers/GlobalProvider';
+import { GlobalProvider } from './app/contexts/GlobalContext';
 import styles from './app/styles/common';
 
+
 // Doesn't need lifecycle hooks and state is provided in provider
-const App = () => (
+const App = props => (
   <GlobalProvider>
     <Fragment>
       <SafeAreaView style={{ flex: 0, backgroundColor: 'red' }} />
-      <AppContainer />
+      <AppContainer
+        ref={(navigatorRef) => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }}
+      />
     </Fragment>
   </GlobalProvider>
 );

@@ -1,18 +1,17 @@
 import { ScaledSheet } from 'react-native-size-matters';
 
 const scaledStyles = ScaledSheet.create({
-  container: {
+  title: {
     flex: 1,
-    height: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    flexDirection: 'column',
+    justifyContent: 'flex-start',
   },
-  search: {
-    flex: 2,
+  header: {
+    color: 'black',
+    fontSize: '20@ms',
     alignItems: 'center',
-    justifyContent: 'center',
+    textAlign: 'center',
+    justifyContent: 'flex-start',
   },
 });
 

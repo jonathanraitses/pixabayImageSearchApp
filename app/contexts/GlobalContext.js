@@ -1,25 +1,22 @@
 import React, { Component, createContext } from 'react';
 import axios from 'axios';
-import config from '../config.js';
+import config from '../config';
 
-// API key for pixabay
+// API key for pixabay.
 const { apiKey } = config;
 
 const GlobalContext = createContext();
 
 export const GlobalConsumer = GlobalContext.Consumer;
 
-// Provider will be exported wrapped in GlobalProvider component.
-class GlobalProvider extends Component {
+// GlobalProvider contains global state as a component.
+// Wraps entire application (root/App.js).
+export class GlobalProvider extends Component {
     state = {
-      test: 'this is test data.',
-      setTest: () => this.setState({
-        test: 'touched',
-      }),
       queryPixabay: this.queryPixabay,
       results: null,
       currentImage: null,
-      details: [],
+      details: null,
     }
 
     // docs https://pixabay.com/api/docs/
@@ -32,26 +29,23 @@ class GlobalProvider extends Component {
         },
       })
         .then((res) => {
-          console.log(res.data);
+          this.setState({
+            results: res,
+          });
+          console.log(this.state.results);
         })
         .catch((err) => {
           throw new Error('Error querying pixabay: ', err);
         });
     }
 
-    setResults() {
-
-    }
-
     render() {
       return (
-            // value prop is where we define what values are accesible
-            // to the consumer components
-          <GlobalContext.Provider value={{ state: this.state }}>
-              {this.props.children}
-          </GlobalContext.Provider>
+        <GlobalContext.Provider value={{ state: this.state }}>
+          {this.props.children}
+        </GlobalContext.Provider>
       );
     }
 }
 
-export default GlobalProvider;
+export default GlobalContext;

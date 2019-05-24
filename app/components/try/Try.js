@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
 import { Text, View, Button } from 'react-native';
-import GlobalProvider, { GlobalConsumer } from '../../providers/GlobalProvider';
+import React, { Fragment } from 'react';
+import { GlobalProvider, GlobalConsumer } from '../../contexts/GlobalContext';
 import styles from './styles';
 
 const App = () => (

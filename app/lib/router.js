@@ -1,8 +1,8 @@
 import { createMaterialTopTabNavigator } from 'react-navigation';
-import { moderateScale, scale, verticalScale } from 'react-native-size-matters';
-import SearchScreen from '../views/search/SearchScreen';
-import ResultsScreen from '../views/results/ResultsScreen';
-import DetailsScreen from '../views/details/DetailsScreen';
+import { moderateScale } from 'react-native-size-matters';
+import SearchScreen from '../views/search';
+import ResultsScreen from '../views/results';
+import DetailsScreen from '../views/details';
 
 const AppNavigator = createMaterialTopTabNavigator(
   {
