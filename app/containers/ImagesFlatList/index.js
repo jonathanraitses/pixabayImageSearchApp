@@ -20,6 +20,7 @@ const ImageFlatList = (props) => {
       data={state.docs}
       renderItem={({ item }) => (
         <View style={styles.itemContainer}>
+          // potentially refactor linked image to its own component
           <TouchableOpacity
             onPress={
                   () => {
@@ -59,7 +60,8 @@ const ImageFlatList = (props) => {
       //     // uses list ref to force user to top of page.
       //     // should occur before onEndReached due to event queue, but cannot
       //     // guarantee that new content will be at topby the time it works.
-      //     // issue is that ref only works on stateful components and hooks for functional.
+      //     // issue is that ref only works on stateful components and hooks for functional
+      //     // will try to find a work around
       //     flatList.getNode().scrollTo({
       //       y: 0,
       //       animated: true,
