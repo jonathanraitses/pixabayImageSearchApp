@@ -15,12 +15,8 @@ import styles from './styles';
 const ImageFlatList = (props) => {
   const { state, updateKey } = useContext(GlobalContext);
 
-  // instaniate ref
-  const flatList = React.createRef();
-
   return (
     <FlatList
-      ref={flatList}
       data={state.docs}
       renderItem={({ item }) => (
         <View style={styles.itemContainer}>
