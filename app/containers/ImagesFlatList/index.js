@@ -12,6 +12,8 @@ import BoldDescription from '../BoldDescription';
 import RenderSeparator from '../RenderSeparator';
 import styles from './styles';
 
+// consider refactoring NavImage to own component
+
 const ImageFlatList = (props) => {
   const { state, updateKey } = useContext(GlobalContext);
 
@@ -20,7 +22,6 @@ const ImageFlatList = (props) => {
       data={state.docs}
       renderItem={({ item }) => (
         <View style={styles.itemContainer}>
-          // potentially refactor linked image to its own component
           <TouchableOpacity
             onPress={
                   () => {
