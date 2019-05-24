@@ -14,6 +14,8 @@ const scaledStyles = ScaledSheet.create({
   },
   search: {
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });
 

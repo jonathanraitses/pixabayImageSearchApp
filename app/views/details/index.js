@@ -16,11 +16,6 @@ const DetailsScreen = props => (
   <GlobalConsumer>
     {context => (
       <View style={styles.container}>
-        { // TODO: Add switch and store if there is a problem with query state issue here if so.
-          context.state.docs === null
-            ? <ScreenTitle text="Please search first." />
-            : ''
-        }
         <View style={styles.content} />
       </View>
     )}

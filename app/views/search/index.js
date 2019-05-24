@@ -5,11 +5,11 @@ import {
   Button,
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
-import NavigationService from '../../modules/NavigationService';
 import { GlobalConsumer } from '../../contexts/GlobalContext';
 import Icon from '../../components/NavIcon/NavIcon';
 import ScreenTitle from '../../components/ScreenTitle';
 import QueryTextInput from '../../components/QueryTextInput';
+import QueryButton from '../../components/QueryButton';
 import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component
@@ -21,7 +21,7 @@ const SearchScreen = props => (
         <View style={styles.content}>
           <View style={styles.search}>
             <QueryTextInput />
-            <Button title="test"/>
+            <QueryButton title={"submit"} />
           </View>
         </View>
       </View>

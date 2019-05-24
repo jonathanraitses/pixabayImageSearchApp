@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 import React, { Component, createContext } from 'react';
 import axios from 'axios';
 import config from '../config';
@@ -18,25 +19,17 @@ export class GlobalProvider extends Component {
     docs: null,
     selectedImage: null,
   }
+  // TODO: seperate contexts. This format causes everything to rerender on update.
 
   // docs https://pixabay.com/api/docs/
   // defaults to 20 images unless added per_page key in params
   queryPixabay(query) {
-    axios.get('https://pixabay.com/api/', {
+    return axios.get('https://pixabay.com/api/', {
       params: {
         key: apiKey,
         q: query,
       },
     })
-      .then((res) => {
-        this.setState({
-          docs: res,
-        });
-        console.log(this.state.docs);
-      })
-      .catch((err) => {
-        throw new Error('Error querying pixabay: ', err);
-      });
   }
 
   render() {

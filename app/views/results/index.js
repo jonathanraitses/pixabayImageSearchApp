@@ -16,11 +16,6 @@ const ResultsScreen = props => (
   <GlobalConsumer>
     {context => (
       <View style={styles.container}>
-        {
-          context.state.docs === null
-            ? <ScreenTitle text="Please search first." />
-            : ''
-        }
         <View style={styles.content} />
       </View>
     )}
