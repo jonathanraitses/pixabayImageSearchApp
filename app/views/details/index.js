@@ -7,6 +7,7 @@ import Icon from '../../containers/NavIcon/NavIcon';
 import GlobalContext from '../../contexts/GlobalContext';
 import BoldDescription from '../../containers/BoldDescription';
 import NavButton from '../../containers/NavButton';
+import AvatarImage from '../../containers/AvatarImage';
 import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component.
@@ -16,11 +17,11 @@ const DetailsScreen = (props) => {
 
   return (
     <View style={styles.container}>
+      <AvatarImage url={state.selectedImage.userImageURL} />
       <BoldDescription topic="Creator" description={state.selectedImage.user} />
       <BoldDescription topic="Views" description={state.selectedImage.views} />
       <BoldDescription topic="Likes" description={state.selectedImage.likes} />
       <BoldDescription topic="Favorites" description={state.selectedImage.favorites} />
-      <BoldDescription topic="Large Image URL" description={state.selectedImage.largeImageURL} />
       <NavButton location="Results" />
     </View>
   );
