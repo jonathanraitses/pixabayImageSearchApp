@@ -6,6 +6,7 @@ import {
 import styles from './styles';
 import GlobalContext from '../../contexts/GlobalContext';
 
+// can be refactored to use for any key in state if you so choose
 const QueryTextInput = (...props) => {
   const { state, updateKey } = useContext(GlobalContext);
   // takes state from globalcontext and onChange updates query value with typed input
