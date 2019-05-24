@@ -1,15 +1,14 @@
 /* eslint-disable no-use-before-define */
 import React from 'react';
 import {
-  Text,
   View,
-  TouchableOpacity,
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import NavigationService from '../../modules/NavigationService';
 import { GlobalConsumer } from '../../contexts/GlobalContext';
 import Icon from '../../components/NavIcon/NavIcon';
 import ScreenTitle from '../../components/ScreenTitle';
+import QueryTextInput from '../../components/QueryTextInput';
 import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component
@@ -18,8 +17,8 @@ const SearchScreen = props => (
     {context => (
       <View style={styles.container}>
         <ScreenTitle text="Input the image you want below and then hit submit." />
-        <View style={styles.search}>
-          
+        <View style={styles.content}>
+          <QueryTextInput />
         </View>
       </View>
     )}

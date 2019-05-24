@@ -7,12 +7,10 @@ const scaledStyles = ScaledSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
-    flexDirection: 'column',
   },
-  search: {
+  content: {
     flex: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'flex-start',
   },
 });
 

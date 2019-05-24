@@ -13,11 +13,7 @@ const ScreenTitle = ({ text }) => (
 );
 
 ScreenTitle.propTypes = {
-  text: PropTypes.string,
-};
-
-ScreenTitle.defaultProps = {
-  text: '',
+  text: PropTypes.string.isRequired,
 };
 
 export default ScreenTitle;

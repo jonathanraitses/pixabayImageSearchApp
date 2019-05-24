@@ -8,18 +8,8 @@ const scaledStyles = ScaledSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
   },
-  title: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  header: {
-    color: 'white',
-    fontSize: '20@s',
-  },
-  navButton: {
-    color: 'white',
-    backgroundColor: '#FF1654',
+  content: {
+
   },
 });
 

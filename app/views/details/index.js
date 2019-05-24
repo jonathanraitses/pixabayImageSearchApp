@@ -6,17 +6,25 @@ import {
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import NavigationService from '../../modules/NavigationService';
+import { GlobalConsumer } from '../../contexts/GlobalContext';
+import ScreenTitle from '../../components/ScreenTitle';
 import Icon from '../../components/NavIcon/NavIcon';
 import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component.
 const DetailsScreen = props => (
-  <View style={styles.container}>
-    <Button
-      title="Go to Details... again"
-      onPress={() => NavigationService.navigate('Details')}
-    />
-  </View>
+  <GlobalConsumer>
+    {context => (
+      <View style={styles.container}>
+        { // TODO: Add switch and store if there is a problem with query state issue here if so.
+          context.state.results === null
+            ? <ScreenTitle text="Please search first." />
+            : ''
+        }
+        <View style={styles.content} />
+      </View>
+    )}
+  </GlobalConsumer>
 );
 
 // TODO: refactor .navigationOptions to be generated through a function for modularization.

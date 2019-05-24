@@ -13,6 +13,8 @@ export const GlobalConsumer = GlobalContext.Consumer;
 // Wraps entire application (root/App.js).
 export class GlobalProvider extends Component {
     state = {
+      query: 'asd',
+      setQuery: this.setQuery,
       queryPixabay: this.queryPixabay,
       results: null,
       currentImage: null,
@@ -37,6 +39,12 @@ export class GlobalProvider extends Component {
         .catch((err) => {
           throw new Error('Error querying pixabay: ', err);
         });
+    }
+
+    setQuery(input) {
+      this.setState({
+        query: input,
+      });
     }
 
     render() {
