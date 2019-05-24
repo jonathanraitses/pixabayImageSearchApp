@@ -2,11 +2,12 @@ import { ScaledSheet } from 'react-native-size-matters';
 
 const scaledStyles = ScaledSheet.create({
   title: {
-    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingLeft: '5@ms',
-    paddingRight: '5@ms',
+    justifyContent: 'flex-start',
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 5,
+    marginBottom: 5,
   },
   header: {
     color: 'black',

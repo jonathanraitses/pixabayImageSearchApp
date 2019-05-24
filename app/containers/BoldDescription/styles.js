@@ -13,8 +13,6 @@ const scaledStyles = ScaledSheet.create({
   descriptionContainer: {
     flexDirection: 'row',
     height: '40@ms',
-    // marginTop: 5,
-    // marginBottom: 5,
   },
 });
 

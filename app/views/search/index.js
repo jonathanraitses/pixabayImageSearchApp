@@ -13,7 +13,7 @@ import styles from './styles';
 // eslint-disable-next-line no-unused-vars
 const SearchScreen = props => (
   <View style={styles.container}>
-    <ScreenTitle text="Type the image you want to see below and then hit submit." />
+    <ScreenTitle text="Type the image you want to see below and then hit submit:" />
     <View style={styles.content}>
       <View style={styles.search}>
         <QueryTextInput />

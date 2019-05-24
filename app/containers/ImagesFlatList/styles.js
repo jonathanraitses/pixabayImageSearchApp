@@ -4,7 +4,6 @@ const scaledStyles = ScaledSheet.create({
   itemContainer: {
     flex: 1,
     flexDirection: 'row',
-    marginBottom: 3,
   },
   itemImage: {
     width: '80@ms0.6',
@@ -12,8 +11,6 @@ const scaledStyles = ScaledSheet.create({
     margin: 5,
   },
   itemDescriptionContainer: {
-    flex: 1,
-    justifyContent: 'center',
     marginLeft: 5,
   },
   itemViews: {

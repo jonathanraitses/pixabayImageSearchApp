@@ -12,6 +12,7 @@ const scaledStyles = ScaledSheet.create({
     overflow: 'hidden',
     padding: 12,
     textAlign: 'center',
+    marginLeft: 5,
   },
 });
 

@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import Icon from '../../containers/NavIcon/NavIcon';
+import ScreenTitle from '../../containers/ScreenTitle';
 import ImagesFlatList from '../../containers/ImagesFlatList';
 import styles from './styles';
 
@@ -11,6 +12,8 @@ import styles from './styles';
 // eslint-disable-next-line no-unused-vars
 const ResultsScreen = props => (
   <View style={styles.container}>
+    <ScreenTitle text="Search Results:" />
+    <ScreenTitle text="Tap an image to see more." />
     <ImagesFlatList />
   </View>
 );

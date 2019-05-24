@@ -8,6 +8,7 @@ import NavigationService from '../../modules/NavigationService';
 import GlobalContext from '../../contexts/GlobalContext';
 import styles from './styles';
 
+// Easily refactorable to pass more props and determine where to query
 const QueryTextInput = ({ title }) => {
   const { state, updateKey } = useContext(GlobalContext);
 
