@@ -13,6 +13,7 @@ import RenderSeparator from '../RenderSeparator';
 import styles from './styles';
 
 // consider refactoring NavImage to own component
+// add total number of results and pages to top
 
 const ImageFlatList = (props) => {
   const { state, updateKey } = useContext(GlobalContext);
