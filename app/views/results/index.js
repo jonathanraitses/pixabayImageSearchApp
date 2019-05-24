@@ -4,12 +4,13 @@ import {
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import Icon from '../../components/NavIcon/NavIcon';
+import ImagesFlatList from '../../components/ImagesFlatList';
 import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component.
 const ResultsScreen = props => (
   <View style={styles.container}>
-    <View style={styles.content} />
+    <ImagesFlatList />
   </View>
 );
 
@@ -26,3 +27,4 @@ ResultsScreen.navigationOptions = {
 };
 
 export default ResultsScreen;
+//activityIndicator

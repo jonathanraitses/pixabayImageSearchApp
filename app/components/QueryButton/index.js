@@ -21,14 +21,13 @@ const QueryTextInput = ({ title }) => {
         () => state.queryPixabay(state.query)
           .then((res) => {
             // takes docs from query, and updates provider
-            updateKey('docs', res.data);
+            updateKey('docs', res.data.hits);
             // navigates to results once docs are in state
             NavigationService.navigate('Results');
-            // TODO: add 'loading' to state and render a loading gif.
           })
           .catch((err) => {
             throw new Error('Error querying pixabay: ', err);
-            // TODO: Notify user that there was an issue and the following steps.
+            // TODO: Store error in state with updateKey and notify user based on error
           })
       }
     >

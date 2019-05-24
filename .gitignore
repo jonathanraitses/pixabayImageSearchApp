@@ -55,4 +55,4 @@ buck-out/
 *.jsbundle
 
 # Config Containing Api Key for Pixabay
-src/config.js
+app/config.js

@@ -15,8 +15,8 @@ export class GlobalProvider extends Component {
   state = {
     query: '',
     queryPixabay: this.queryPixabay,
-    docs: null,
-    selectedImage: null,
+    docs: [],
+    selectedImage: {},
   }
   // TODO: seperate contexts. This format causes everything to rerender on update.
 

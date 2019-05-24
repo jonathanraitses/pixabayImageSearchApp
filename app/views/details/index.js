@@ -8,8 +8,8 @@ import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component.
 const DetailsScreen = props => (
-  <View style={styles.container}>
-    <View style={styles.content} />
+  <View style={styles.descriptionContainer}>
+
   </View>
 );
 
