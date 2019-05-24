@@ -16,7 +16,7 @@ const scaledStyles = ScaledSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
 });
 
 export default scaledStyles;

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-state */
 import React, { Component, createContext } from 'react';
 import axios from 'axios';
 import config from '../config';
