@@ -49,10 +49,10 @@ If any issues arise or if you prefer can always run the .xproj file in xCode fro
 
 Follow the prompts on the screen. An overview would be:
 * Landing page: 
-  ** Search Screen: input text and then click submit to be navigated to results
-    *** Results Screen: scroll to see dynamically rendering items up to 200 entries and click on any image to 
+  * Search Screen: input text and then click submit to be navigated to results
+    * Results Screen: scroll to see dynamically rendering items up to 200 entries and click on any image to 
     be navigated to the details screen for that image.
-      *** Details: Once done click the results button to navigate back to results or swipe/click a tab to navigate
+      * Details: Once done click the results button to navigate back to results or swipe/click a tab to navigate
       to a different screen/tab.
 
 ## Version-History
