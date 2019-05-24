@@ -1,3 +1,8 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable react/no-unused-state */
+/* eslint-disable semi */
 import React, { Component, createContext } from 'react';
 import axios from 'axios';
 import config from '../config';
@@ -35,9 +40,9 @@ export class GlobalProvider extends Component {
   render() {
     return (
       <GlobalContext.Provider value={{
-        state: this.state, 
+        state: this.state,
         updateKey: (key, value) => this.setState({
-          [key]: value
+          [key]: value,
         }),
       }}
       >

@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 
+// eslint-disable-next-line react/prop-types
 const BoldDescription = ({ topic, description }) => (
   <View style={styles.descriptionContainer}>
     <Text style={styles.topic}>{`${topic}: `}</Text>

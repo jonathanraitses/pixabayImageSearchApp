@@ -15,8 +15,7 @@ const generate = () => {
   const string = `const images = {
       ${properties}
     }
-    export default images
-    `;
+    export default images;\n`;
 
   fs.writeFileSync('app/assets/images.js', string, 'utf8');
 };
