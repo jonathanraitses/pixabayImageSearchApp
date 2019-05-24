@@ -1,13 +1,6 @@
 import { ScaledSheet } from 'react-native-size-matters';
 
 const scaledStyles = ScaledSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    height: '80@ms',
-  },
   button: {
     backgroundColor: 'blue',
     borderColor: 'white',

@@ -18,7 +18,8 @@ export class GlobalProvider extends Component {
     docs: [],
     selectedImage: {},
   }
-  // TODO: seperate contexts. This format causes everything to rerender on update.
+  // TODO: seperate contexts.
+  // query and queryPixabay / docs and selectedImage.
 
   // docs https://pixabay.com/api/docs/
   // defaults to 20 images unless added per_page key in params

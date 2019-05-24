@@ -29,4 +29,6 @@ const AppNavigator = createMaterialTopTabNavigator(
   },
 );
 
+// TODO: add side scroller
+
 export default AppNavigator;

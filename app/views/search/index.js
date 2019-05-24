@@ -3,10 +3,10 @@ import {
   View,
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
-import Icon from '../../components/NavIcon/NavIcon';
-import ScreenTitle from '../../components/ScreenTitle';
-import QueryTextInput from '../../components/QueryTextInput';
-import QueryButton from '../../components/QueryButton';
+import Icon from '../../containers/NavIcon/NavIcon';
+import ScreenTitle from '../../containers/ScreenTitle';
+import QueryTextInput from '../../containers/QueryTextInput';
+import QueryButton from '../../containers/QueryButton';
 import styles from './styles';
 
 // Doesn't need lifecycle hooks and state is provided in provider in parent component
@@ -16,7 +16,7 @@ const SearchScreen = props => (
     <View style={styles.content}>
       <View style={styles.search}>
         <QueryTextInput />
-        <QueryButton title={"submit"} />
+        <QueryButton title="submit" />
       </View>
     </View>
   </View>
@@ -25,6 +25,8 @@ const SearchScreen = props => (
 // TODO: refactor .navigationOptions to be generated through a function for modularization.
 SearchScreen.navigationOptions = {
   header: null,
+  // tintColor refers to lib/router.js props
+  // when tab is in focus, color becomes white and icon increases in size
   tabBarIcon: ({ tintColor, focused }) => (
     <Icon
       name="search"
