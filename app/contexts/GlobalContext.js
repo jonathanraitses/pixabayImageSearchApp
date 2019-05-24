@@ -25,8 +25,8 @@ export class GlobalProvider extends Component {
     page: 1,
     loading: false,
   }
-  // TODO: seperate contexts.
-  // query and queryPixabay / docs and selectedImage.
+  // TODO: seperate contexts and add activity navigator for loading during fetch
+  // query and queryPixabay / docs and selectedImage to avoid rerenders
 
   // docs https://pixabay.com/api/docs/
   // defaults to 20 images unless added per_page key in params
