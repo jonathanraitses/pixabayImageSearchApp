@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start-no-cache": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "update-images": "node scripts/images.js",
     "devtools": "react-devtools",
     "lint": "eslint *.js **/*.js",

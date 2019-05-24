@@ -13,15 +13,6 @@ const scaledStyles = ScaledSheet.create({
   itemDescriptionContainer: {
     marginLeft: 5,
   },
-  itemViews: {
-    fontSize: '18@ms',
-    color: 'green',
-    marginBottom: 15,
-  },
-  itemLikes: {
-    fontSize: '16@ms',
-    color: 'orange',
-  },
 });
 
 export default scaledStyles;

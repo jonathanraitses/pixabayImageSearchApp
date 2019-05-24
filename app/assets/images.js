@@ -1,4 +1,4 @@
 const images = {
-      'pixabay-logo': require('./images/pixabay-logo.png')
+      pixabayLogo: require('./images/pixabayLogo.png')
     }
     export default images;

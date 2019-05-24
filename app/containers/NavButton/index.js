@@ -7,23 +7,24 @@ import PropTypes from 'prop-types';
 import NavigationService from '../../modules/NavigationService';
 import styles from './styles';
 
-const NavButton = ({ location }) => (
+// dynamically creates button that navigates to a screen.
+const NavButton = ({ screen }) => (
   <TouchableOpacity
     onPress={
       () => {
-        NavigationService.navigate('Results');
+        NavigationService.navigate(screen);
       }
     }
   >
     {/* styling goes into text */}
     <Text style={styles.button}>
-      {`Back to ${location}`}
+      {`Back to ${screen}`}
     </Text>
   </TouchableOpacity>
 );
 
 NavButton.propTypes = {
-  location: PropTypes.string.isRequired,
+  screen: PropTypes.string.isRequired,
 };
 
 export default NavButton;

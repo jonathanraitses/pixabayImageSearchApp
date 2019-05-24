@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 
+// Title that can be put on the top of a screen to describe it.
 const ScreenTitle = ({ text }) => (
   <View style={styles.title}>
     <Text style={styles.header}>{text}</Text>

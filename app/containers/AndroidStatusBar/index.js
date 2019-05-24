@@ -3,6 +3,7 @@ import {
   StatusBar,
 } from 'react-native';
 
+// styles android status bar as best you can with native modules.
 const AndroidStatusBar = (...props) => (
   <StatusBar
     backgroundColor="red"

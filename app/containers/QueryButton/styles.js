@@ -10,9 +10,10 @@ const scaledStyles = ScaledSheet.create({
     fontSize: '14@ms',
     fontWeight: 'bold',
     overflow: 'hidden',
+    height: '40@ms',
     padding: 12,
     textAlign: 'center',
-    marginLeft: 5,
+    marginLeft: 1,
   },
 });
 

@@ -8,7 +8,7 @@ import GlobalContext from '../../contexts/GlobalContext';
 
 const QueryTextInput = (...props) => {
   const { state, updateKey } = useContext(GlobalContext);
-
+  // takes state from globalcontext and onChange updates query value with typed input
   return (
     <View style={styles.inputContainer}>
       <TextInput

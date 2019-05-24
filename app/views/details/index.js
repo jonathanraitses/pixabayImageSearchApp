@@ -22,7 +22,7 @@ const DetailsScreen = (props) => {
       <BoldDescription topic="Views" description={state.selectedImage.views} />
       <BoldDescription topic="Likes" description={state.selectedImage.likes} />
       <BoldDescription topic="Favorites" description={state.selectedImage.favorites} />
-      <NavButton location="Results" />
+      <NavButton screen="Results" />
     </View>
   );
 };

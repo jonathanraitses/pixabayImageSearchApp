@@ -9,7 +9,9 @@ import styles from './styles';
 const AvatarImage = ({ url }) => (
   <Image
     style={styles.avatar}
-    source={{ uri: url }}
+    // source is either passed as a prop or defaulted to default image.
+    // eslint-disable-next-line global-require
+    source={url ? { uri: url } : require('../../assets/images/pixabayLogo.png')}
   />
 );
 

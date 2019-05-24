@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import NavigationService from '../../modules/NavigationService';
 import GlobalContext from '../../contexts/GlobalContext';
+import BoldDescription from '../BoldDescription';
 import RenderSeparator from '../RenderSeparator';
 import styles from './styles';
 
@@ -16,12 +17,13 @@ const ImageFlatList = (props) => {
   const { state, updateKey } = useContext(GlobalContext);
 
   return (
-  // TODO: refactor and seperate child components into their own
     <FlatList
       data={state.docs}
       renderItem={({ item }) => (
         <View style={styles.itemContainer}>
-          {/* clicking image will send item to state as currentImage and navigate to details */}
+          {/* clicking image will send item to state as currentImage and navigate to details
+          which will describe the selected image.
+          */}
           <TouchableOpacity
             onPress={
                   () => {
@@ -37,8 +39,8 @@ const ImageFlatList = (props) => {
             />
           </TouchableOpacity>
           <View style={styles.itemDescriptionContainer}>
-            <Text style={styles.itemViews}>{`Total Views: ${item.views}`}</Text>
-            <Text style={styles.itemLikes}>{`Total Likes: ${item.likes}`}</Text>
+            <BoldDescription topic="Total Views" description={item.views} />
+            <BoldDescription topic="Total Likes" description={item.likes} />
           </View>
         </View>
       )}
