@@ -1,18 +1,22 @@
 import { ScaledSheet } from 'react-native-size-matters';
 
 const scaledStyles = ScaledSheet.create({
-  button: {
+  touchable: {
+    height: '40@ms',
     backgroundColor: 'blue',
-    borderColor: 'white',
+    borderColor: 'black',
+    textAlign: 'center',
     borderWidth: 1,
-    borderRadius: '12@ms',
+    borderRadius: 12,
+    justifyContent: 'center',
+    marginLeft: 2,
+  },
+  text: {
     color: 'white',
     fontSize: '14@ms',
     fontWeight: 'bold',
     overflow: 'hidden',
-    height: '40@ms',
     padding: 12,
-    textAlign: 'center',
     marginLeft: 1,
   },
 });

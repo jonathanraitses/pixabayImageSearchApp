@@ -4,16 +4,17 @@ import {
 } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import Icon from '../../containers/NavIcon/NavIcon';
-import ScreenTitle from '../../containers/ScreenTitle';
+import ScreenTitle from '../../containers/Title';
 import QueryTextInput from '../../containers/QueryTextInput';
-import QueryButton from '../../containers/QueryButton';
+import QueryButton from '../../containers/SearchButton';
 import styles from './styles';
 
-// Doesn't need lifecycle hooks and state is provided in provider in parent component
 // eslint-disable-next-line no-unused-vars
 const SearchScreen = props => (
   <View style={styles.container}>
-    <ScreenTitle text="Type the image you want to see below and then hit submit:" />
+    <View style={styles.header}>
+      <ScreenTitle text="Type the Keywords for an Image Below and Hit Submit" />
+    </View>
     <View style={styles.content}>
       <View style={styles.search}>
         <QueryTextInput />

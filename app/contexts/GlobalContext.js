@@ -21,7 +21,7 @@ export class GlobalProvider extends Component {
     query: '',
     queryPixabay: this.queryPixabay,
     docs: [],
-    selectedImage: {},
+    selectedImage: null,
     page: 1,
     loading: false,
   }

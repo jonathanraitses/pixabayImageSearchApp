@@ -8,10 +8,10 @@ const scaledStyles = ScaledSheet.create({
   itemImage: {
     width: '80@ms0.6',
     height: '80@ms0.6',
-    margin: 5,
   },
   itemDescriptionContainer: {
-    marginLeft: 5,
+    paddingLeft: 5,
+    justifyContent: 'center',
   },
 });
 

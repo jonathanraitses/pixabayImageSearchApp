@@ -5,8 +5,7 @@ import {
 const styles = StyleSheet.create({
   itemSeperator: {
     height: 1,
-    alignSelf: 'stretch',
-    backgroundColor: 'black',
+    backgroundColor: '#CBCBCB',
   },
 });
 

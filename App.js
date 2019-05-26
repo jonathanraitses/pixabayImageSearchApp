@@ -1,28 +1,31 @@
 /* eslint-disable no-unused-vars */
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 import {
   createAppContainer,
 } from 'react-navigation';
+import { YellowBox } from 'react-native';
 import NavigationService from './app/modules/NavigationService';
 import AppNavigator from './app/lib/router';
 import { GlobalProvider } from './app/contexts/GlobalContext';
-import IosSafeView from './app/containers/IosSafeView';
-import AndroidStatusBar from './app/containers/AndroidStatusBar';
+import TopBar from './app/containers/TopBar';
 
 // Doesn't need lifecycle hooks and state is provided in provider
-const App = props => (
-  <GlobalProvider>
-    <Fragment>
-      <IosSafeView />
-      <AndroidStatusBar />
-      <AppContainer
-        ref={(navigatorRef) => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-      />
-    </Fragment>
-  </GlobalProvider>
-);
+class App extends Component {
+  render() {
+    // Depreceated warnings.
+    YellowBox.ignoreWarnings(['ViewPagerAndroid']);
+    return (
+      <GlobalProvider>
+        <TopBar />
+        <AppContainer
+          ref={(navigatorRef) => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
+      </GlobalProvider>
+    );
+  }
+}
 
 const AppContainer = createAppContainer(AppNavigator);
 
