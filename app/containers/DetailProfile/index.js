@@ -4,23 +4,27 @@ import DetailDescription from './DetailDescription';
 import AvatarImage from './AvatarImage';
 import NavButton from '../NavButton';
 
+
 const DetailProfile = ({
   selectedImage: {
     previewURL, user, largeImageURL, views, likes, favorites,
   },
-}) => (
-  <Fragment>
-    <AvatarImage url={previewURL} />
-    <DetailDescription
-      url={largeImageURL}
-      user={user}
-      views={views}
-      likes={likes}
-      favorites={favorites}
-    />
-    <NavButton screen="Results" text="Return to Results" />
-  </Fragment>
-);
+}) => {
+  const descriptions = [
+    ['Creator', user],
+    ['Full Url', largeImageURL],
+    ['Views', views],
+    ['Likes', likes],
+    ['Favorites', favorites],
+  ];
+  return (
+    <Fragment>
+      <AvatarImage url={previewURL} />
+      <DetailDescription descriptions={descriptions} />
+      <NavButton screen="Results" text="Return to Results" />
+    </Fragment>
+  );
+};
 
 DetailProfile.propTypes = {
   selectedImage: PropTypes.shape({

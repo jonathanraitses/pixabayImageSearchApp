@@ -6,15 +6,13 @@ import {
 import BoldDescription from '../../BoldDescription';
 import styles from './styles';
 
-const DetailDescription = ({
-  user, url, views, likes, favorites,
-}) => (
+const DetailDescription = ({ descriptions }) => (
   <View style={styles.descriptions}>
-    <BoldDescription topic="Creator" description={user} />
-    <BoldDescription topic="Full Url" description={url} />
-    <BoldDescription topic="Views" description={views} />
-    <BoldDescription topic="Likes" description={likes} />
-    <BoldDescription topic="Favorites" description={favorites} />
+    {
+      descriptions.map(description => (
+        <BoldDescription topic={description[0]} description={description[1]} key={description[0]} />
+      ))
+    }
   </View>
 );
 
