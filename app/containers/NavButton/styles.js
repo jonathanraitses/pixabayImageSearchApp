@@ -9,10 +9,10 @@ const scaledStyles = ScaledSheet.create({
     borderWidth: 1,
     borderRadius: 12,
     justifyContent: 'center',
-    marginLeft: 2,
   },
   text: {
     color: 'white',
+    textAlign: 'center',
     fontSize: '14@ms',
     fontWeight: 'bold',
     overflow: 'hidden',

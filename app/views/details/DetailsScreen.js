@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from 'react';
+import React, { useContext } from 'react';
 import {
   View,
 } from 'react-native';
@@ -25,7 +25,7 @@ const DetailsScreen = (props) => {
       <View style={styles.content}>
         {
           state.selectedImage === null
-            ? <Fragment />
+            ? null
             : <DetailProfile selectedImage={state.selectedImage} />
         }
       </View>

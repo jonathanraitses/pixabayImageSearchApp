@@ -8,8 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   itemDescriptionContainer: {
-    paddingLeft: 5,
-    justifyContent: 'center',
+    width: '100%',
   },
 });
 

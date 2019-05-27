@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   View,
 } from 'react-native';
@@ -22,13 +22,13 @@ const DetailProfile = ({
     ['Favorites', favorites],
   ];
   return (
-    <Fragment>
+    <View style={styles.profile}>
       <AvatarImage url={previewURL} />
       <View style={styles.descriptions}>
         <DescriptionList descriptions={descriptions} />
       </View>
       <NavButton screen="Results" text="Return to Results" />
-    </Fragment>
+    </View>
   );
 };
 
