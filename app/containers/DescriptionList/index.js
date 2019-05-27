@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { Fragment } from 'react';
 import BoldDescription from '../BoldDescription';
+// no need for styling
 
 const DescriptionList = ({ descriptions }) => (
   <Fragment>
