@@ -5,12 +5,12 @@ import ResultsScreen from '../views/results';
 import DetailsScreen from '../views/details';
 
 const AppNavigator = createMaterialTopTabNavigator(
-  {
+  { //screens for tabNav
     Search: SearchScreen,
     Results: ResultsScreen,
     Details: DetailsScreen,
   },
-  {
+  { //stylistic options for tab
     tabBarOptions: {
       activeTintColor: 'white',
       inactiveTintColor: 'black',
@@ -28,7 +28,5 @@ const AppNavigator = createMaterialTopTabNavigator(
     },
   },
 );
-
-// TODO: add side scroller
 
 export default AppNavigator;

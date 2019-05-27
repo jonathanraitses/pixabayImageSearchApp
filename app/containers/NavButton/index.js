@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import NavigationService from '../../modules/NavigationService';
 import styles from './styles';
 
-// dynamically creates button that navigates to a screen.
+// creates button that navigates to a screen.
 const NavButton = ({ screen }) => (
   <TouchableOpacity
     onPress={
