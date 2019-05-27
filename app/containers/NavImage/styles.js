@@ -1,11 +1,9 @@
 import { ScaledSheet } from 'react-native-size-matters';
 
 const scaledStyles = ScaledSheet.create({
-  container: {
-    paddingTop: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
+  itemImage: {
+    width: '80@ms0.6',
+    height: '80@ms0.6',
   },
 });
 

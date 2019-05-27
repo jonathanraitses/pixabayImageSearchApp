@@ -10,7 +10,6 @@ const scaledStyles = ScaledSheet.create({
   },
   descriptionContainer: {
     flexDirection: 'row',
-    width: '100@ms',
   },
 });
 

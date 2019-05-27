@@ -9,13 +9,10 @@ const imageFileNames = () => {
 };
 const generate = () => {
   const properties = imageFileNames()
-    .map(name => `'${name.split('.')[0]}': require('./images/${name}')`)
-    .join(',\n  ');
+    .map(name => `${name.split('.')[0]}: require('./images/${name}'),`)
+    .join('\n  ');
 
-  const string = `const images = {
-      ${properties}
-    }
-    export default images;\n`;
+  const string = `const images = {\n  ${properties}\n};\n\nexport default images;\n`;
 
   fs.writeFileSync('app/assets/images.js', string, 'utf8');
 };

@@ -15,7 +15,6 @@ const scaledStyles = ScaledSheet.create({
   },
   content: {
     flex: 2,
-    backgroundColor: 'white',
   },
 });
 

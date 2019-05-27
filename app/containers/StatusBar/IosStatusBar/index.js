@@ -5,9 +5,9 @@ import {
 } from 'react-navigation';
 import styles from './styles';
 
-const IosSafeView = props => (
+const IosStatusBar = props => (
   // when imported into a Fragment pads and styles the status bar.
   <SafeAreaView style={styles.top} />
 );
 
-export default IosSafeView;
+export default IosStatusBar;

@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable react/no-unused-state */
-/* eslint-disable semi */
 import React, { Component, createContext } from 'react';
 import axios from 'axios';
 import config from '../config';
@@ -23,14 +22,9 @@ export class GlobalProvider extends Component {
     docs: [],
     selectedImage: null,
     totalHits: null,
-    page: 1,
-    loading: false,
   }
-  // TODO: seperate contexts.
-  // query and queryPixabay / docs and selectedImage.
 
   // docs https://pixabay.com/api/docs/
-  // defaults to 20 images unless added per_page key in params
   queryPixabay(query, page = 1) {
     return axios.get('https://pixabay.com/api/', {
       params: {
@@ -39,7 +33,7 @@ export class GlobalProvider extends Component {
         per_page: 200,
         page,
       },
-    })
+    });
   }
 
   render() {

@@ -18,12 +18,11 @@ const ResultsScreen = (props) => {
           text={
             state.docs.length === 0
               ? 'Nothing Found. Please Try a New Keyword!'
-              : `Total Results for '${state.query}': ${state.totalHits}`
+              : `Displaying Top Results for "${state.query}"`
           }
         />
       </View>
       <View style={styles.content}>
-        {/* ADD PAGE NAVIGATOR HERE */}
         <ImagesFlatList />
       </View>
     </View>

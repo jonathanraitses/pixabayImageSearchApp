@@ -7,7 +7,7 @@ import { YellowBox } from 'react-native';
 import NavigationService from './app/modules/NavigationService';
 import AppNavigator from './app/lib/router';
 import { GlobalProvider } from './app/contexts/GlobalContext';
-import TopBar from './app/containers/TopBar';
+import StatusBar from './app/containers/StatusBar';
 
 // Doesn't need lifecycle hooks and state is provided in provider
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
     YellowBox.ignoreWarnings(['ViewPagerAndroid']);
     return (
       <GlobalProvider>
-        <TopBar />
+        <StatusBar />
         <AppContainer
           ref={(navigatorRef) => {
             NavigationService.setTopLevelNavigator(navigatorRef);

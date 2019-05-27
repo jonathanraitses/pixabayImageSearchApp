@@ -13,7 +13,6 @@ const SearchScreen = props => (
       <Title text="Type the Keywords for an Image Below and Hit Submit" />
     </View>
     <View style={styles.content}>
-      {/* make own component */}
       <SearchBar />
     </View>
   </View>

@@ -1,33 +1,30 @@
-import React from 'react';
-import {
-  View,
-} from 'react-native';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import BoldDescription from '../BoldDescription';
-import NavButton from '../NavButton';
+import DetailDescription from './DetailDescription';
 import AvatarImage from './AvatarImage';
-import styles from './styles';
+import NavButton from '../NavButton';
 
 const DetailProfile = ({
   selectedImage: {
     previewURL, user, largeImageURL, views, likes, favorites,
   },
 }) => (
-  <View style={styles.container}>
+  <Fragment>
     <AvatarImage url={previewURL} />
-    <BoldDescription topic="Creator" description={user} />
-    <BoldDescription topic="Full Url" description={largeImageURL} />
-    <BoldDescription topic="Views" description={views} />
-    <BoldDescription topic="Likes" description={likes} />
-    <BoldDescription topic="Favorites" description={favorites} />
-    <NavButton screen="Results" />
-  </View>
+    <DetailDescription
+      url={largeImageURL}
+      user={user}
+      views={views}
+      likes={likes}
+      favorites={favorites}
+    />
+    <NavButton screen="Results" text="Return to Results" />
+  </Fragment>
 );
 
 DetailProfile.propTypes = {
   selectedImage: PropTypes.shape({
-    // eslint-disable-next-line react/require-default-props
-    previewURL: PropTypes.string,
+    previewURL: PropTypes.string.isRequired,
     user: PropTypes.string.isRequired,
     largeImageURL: PropTypes.string.isRequired,
     views: PropTypes.number.isRequired,

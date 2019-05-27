@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Platform } from 'react-native';
-import IosSafeView from './IosSafeView';
+import IosSafeView from './IosStatusBar';
 import AndroidStatusBar from './AndroidStatusBar';
 
 const TopBar = () => {

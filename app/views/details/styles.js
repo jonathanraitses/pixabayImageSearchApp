@@ -15,7 +15,10 @@ const scaledStyles = ScaledSheet.create({
   },
   content: {
     flex: 2,
-    backgroundColor: 'white',
+    marginTop: 5,
+    marginBottom: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
