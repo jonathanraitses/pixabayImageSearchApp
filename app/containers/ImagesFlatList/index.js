@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import GlobalContext from '../../contexts/GlobalContext';
 import NavImage from '../NavImage';
-import ItemDescription from './ItemDescription';
+import DescriptionList from '../DescriptionList';
 import ListHeader from './ListHeader';
 import RenderSeparator from './RenderSeparator';
 import styles from './styles';
@@ -18,6 +18,7 @@ class ImageFlatList extends Component {
   }
 
   renderItem(item, updateKey) {
+    const descriptions = [['Total Views', item.views], ['Total Likes', item.likes]];
     return (
       <View style={styles.itemContainer}>
         <NavImage
@@ -25,7 +26,9 @@ class ImageFlatList extends Component {
           image={item.previewURL}
           func={() => { updateKey('selectedImage', item); }}
         />
-        <ItemDescription views={item.views} likes={item.likes} />
+        <View style={styles.itemDescriptionContainer}>
+          <DescriptionList descriptions={descriptions} />
+        </View>
       </View>
     );
   }

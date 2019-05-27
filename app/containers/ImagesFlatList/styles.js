@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
   },
+  itemDescriptionContainer: {
+    paddingLeft: 5,
+    justifyContent: 'center',
+  },
 });
 
 export default styles;

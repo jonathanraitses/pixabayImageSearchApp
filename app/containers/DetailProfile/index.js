@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
+import {
+  View,
+} from 'react-native';
 import PropTypes from 'prop-types';
-import DetailDescription from './DetailDescription';
+import DescriptionList from '../DescriptionList';
 import AvatarImage from './AvatarImage';
 import NavButton from '../NavButton';
+import styles from './styles';
 
 
 const DetailProfile = ({
@@ -20,7 +24,9 @@ const DetailProfile = ({
   return (
     <Fragment>
       <AvatarImage url={previewURL} />
-      <DetailDescription descriptions={descriptions} />
+      <View style={styles.descriptions}>
+        <DescriptionList descriptions={descriptions} />
+      </View>
       <NavButton screen="Results" text="Return to Results" />
     </Fragment>
   );
