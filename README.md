@@ -23,6 +23,8 @@ Also be sure, once you have cloned the repo, that you add a config.js file to th
 const config = {
   // this is the api key for pixabay
   apiKey: '12556473-f3c29a14fbbca65ba699167e8',
+  // optional status bar color configuration, defaults to red if assigned.
+  statusBarColor: 'red',
 };
 
 export default config;
@@ -49,13 +51,13 @@ If any issues arise or if you prefer can always run the .xproj file in xCode fro
 
 Follow the prompts on the screen. An overview would be:
 * Landing page: 
-  * Search Screen: input text and then click submit to be navigated to results
-    * Results Screen: scroll to see dynamically rendering items up to 200 entries and click on any image to 
-    be navigated to the details screen for that image.
-      * Details: Once done click the results button to navigate back to results or swipe/click a tab to navigate
-      to a different screen/tab.
+  * Search Screen: input text and then click submit to be navigated to results after it finishes loading.
+    * Results Screen: scroll to see dynamically rendering items up to 200 entries (single query max) and click on any image to be navigated to the details screen for that image.
+      * Details: Once done click the results button to navigate back to results or swipe/click a tab to navigate to a different screen/tab.
 
 ## Version-History
+* 2.0
+    * Modularized the code and formatted styles more correctly.
 * 1.0
     * Final react-native build for challenge.
     * See [commit change](https://github.com/jonathan-raitses/Pixabay-Image-Search-App/commit/e2954424efd312d781471f8e78122d54e0b0f6e6)

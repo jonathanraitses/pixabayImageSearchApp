@@ -12,7 +12,6 @@ import ListHeader from './ListHeader';
 import RenderSeparator from './RenderSeparator';
 import styles from './styles';
 
-// on enter make it go to top
 class ImageFlatList extends Component {
   keyExtractor(item) {
     return `${item.id}`;
@@ -42,8 +41,8 @@ class ImageFlatList extends Component {
               keyExtractor={(item, index) => this.keyExtractor(item)}
               ItemSeparatorComponent={() => <RenderSeparator />}
               ListHeaderComponent={() => <ListHeader totalHits={state.totalHits} />}
-              initialNumToRender={8}
-              maxToRenderPerBatch={8}
+              initialNumToRender={6}
+              maxToRenderPerBatch={4}
             />
           )
         }
