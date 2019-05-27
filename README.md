@@ -23,7 +23,7 @@ Also be sure, once you have cloned the repo, that you add a config.js file to th
 const config = {
   // this is the api key for pixabay
   apiKey: '12556473-f3c29a14fbbca65ba699167e8',
-  // optional status bar color configuration, defaults to red if assigned.
+  // optional status bar color configuration, defaults to red if undefined.
   statusBarColor: 'red',
 };
 
@@ -45,7 +45,7 @@ npm run ios (or react-native run-ios)
 npm run android (or react-native run-android)
 ```
 
-If any issues arise or if you prefer can always run the .xproj file in xCode from the ios folder for iOS and for android you can run the project through the ./android folder in the android studio application.
+If any issues arise or if you prefer can always tey to run the .xproj file in xCode from the ios folder for iOS and for android you can run the project through the ./android folder in the android studio application.
 
 ## Use
 
