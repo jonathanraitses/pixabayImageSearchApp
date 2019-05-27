@@ -38,6 +38,8 @@ Assuming you have [react-native, xcode, and android studio installed with approp
 npm install
 npm run start
 ```
+Which will open the metro bundler on port 8081.
+
 
 Open a new terminal in the root directory and now run the following commands:
 ```
