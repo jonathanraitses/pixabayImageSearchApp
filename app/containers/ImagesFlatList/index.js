@@ -9,7 +9,7 @@ import {
 import NavigationService from '../../modules/NavigationService';
 import GlobalContext from '../../contexts/GlobalContext';
 import BoldDescription from '../BoldDescription';
-import RenderSeparator from '../RenderSeparator';
+import RenderSeparator from './RenderSeparator';
 import styles from './styles';
 
 // on enter make it go to top

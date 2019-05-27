@@ -1,36 +1,7 @@
-import React, { useContext } from 'react';
-import {
-  View,
-} from 'react-native';
+import React from 'react';
 import { moderateScale } from 'react-native-size-matters';
-import Icon from '../../containers/NavIcon/NavIcon';
-import GlobalContext from '../../contexts/GlobalContext';
-import ScreenTitle from '../../containers/Title';
-import ImagesFlatList from '../../containers/ImagesFlatList';
-import styles from './styles';
-
-// eslint-disable-next-line no-unused-vars
-const ResultsScreen = (props) => {
-  const { state } = useContext(GlobalContext);
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <ScreenTitle
-          text={
-            state.docs.length === 0
-              ? 'Search Results: Nothing found. Please try a new keyword'
-              : `Search Results: ${state.docs.length}`
-          }
-        />
-      </View>
-      <View style={styles.content}>
-        {/* ADD PAGE NAVIGATOR HERE */}
-        <ImagesFlatList />
-      </View>
-    </View>
-  );
-};
+import ResultsScreen from './ResultsScreen';
+import Icon from '../../containers/NavIcon';
 
 ResultsScreen.navigationOptions = {
   header: null,

@@ -4,9 +4,9 @@ import {
   TextInput,
 } from 'react-native';
 import styles from './styles';
-import GlobalContext from '../../contexts/GlobalContext';
+import GlobalContext from '../../../contexts/GlobalContext';
 
-const QueryTextInput = (...props) => {
+const SearchTextInput = (...props) => {
   const { state, updateKey } = useContext(GlobalContext);
   // takes state from globalcontext and onChange updates query value with typed input
   return (
@@ -22,4 +22,4 @@ const QueryTextInput = (...props) => {
   );
 };
 
-export default QueryTextInput;
+export default SearchTextInput;

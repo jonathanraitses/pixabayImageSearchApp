@@ -7,9 +7,6 @@ const scaledStyles = ScaledSheet.create({
   },
   header: {
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingLeft: 5,
-    paddingRight: 5,
     paddingTop: 5,
     paddingBottom: 5,
     borderBottomWidth: 1,
@@ -20,11 +17,6 @@ const scaledStyles = ScaledSheet.create({
     flex: 2,
     justifyContent: 'center',
     backgroundColor: 'white',
-  },
-  search: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 

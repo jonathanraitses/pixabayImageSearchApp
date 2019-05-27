@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   View,
   Text,
@@ -13,9 +12,5 @@ const BoldDescription = ({ topic, description }) => (
     <Text style={styles.description}>{description}</Text>
   </View>
 );
-
-BoldDescription.propTypes = {
-  topic: PropTypes.string.isRequired,
-};
 
 export default BoldDescription;
