@@ -1,14 +1,12 @@
-import { ScaledSheet } from 'react-native-size-matters';
+import {
+  StyleSheet,
+} from 'react-native';
 
-const scaledStyles = ScaledSheet.create({
+const styles = StyleSheet.create({
   itemContainer: {
     flex: 1,
     flexDirection: 'row',
   },
-  itemDescriptionContainer: {
-    paddingLeft: 5,
-    justifyContent: 'center',
-  },
 });
 
-export default scaledStyles;
+export default styles;

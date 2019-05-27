@@ -12,9 +12,9 @@ const NavImage = ({ image, screen, func }) => (
   <TouchableOpacity
     onPress={
         () => {
-        // optional function that will run on press from props before navigation
+          // optional function that will run on press from props before navigation
           if (func !== undefined) {
-            func();
+            func(); // used to update state before going to a screen. (selectedImage)
             NavigationService.navigate(screen);
           } else {
             NavigationService.navigate(screen);

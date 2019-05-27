@@ -12,12 +12,15 @@ import styles from './styles';
 const SearchBar = () => {
   const { state, updateKey } = useContext(GlobalContext);
 
-  const newSearch = () => state.queryPixabay(state.query)
-    .then((res) => {
-      updateKey('selectedImage', null); // reset selected image
-      updateKey('docs', res.data.hits); // store query results
-      updateKey('totalHits', res.data.hits.length); // total images that match (capped at 200 per query)
-    });
+  const newSearch = () => {
+    updateKey('loading', true);
+    return state.queryPixabay(state.query)
+      .then((res) => {
+        updateKey('selectedImage', null); // reset selected image
+        updateKey('docs', res.data.hits); // store query results
+        updateKey('totalHits', res.data.hits.length); // total images that match (capped at 200 per query)
+      });
+  };
 
   return (
     <View style={styles.searchBar}>

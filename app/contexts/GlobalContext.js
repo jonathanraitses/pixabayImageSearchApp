@@ -17,11 +17,11 @@ export const GlobalConsumer = GlobalContext.Consumer;
 // Wraps entire application (root/App.js).
 export class GlobalProvider extends Component {
   state = {
-    query: '',
-    queryPixabay: this.queryPixabay,
-    docs: [],
-    selectedImage: null,
-    totalHits: null,
+    query: '', // user input
+    queryPixabay: this.queryPixabay, // query function
+    docs: [], // stored docs
+    selectedImage: null, // user selected image
+    totalHits: null, // total images (up to 200 due to query restrictions)
   }
 
   // docs https://pixabay.com/api/docs/
