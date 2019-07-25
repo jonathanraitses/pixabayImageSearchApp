@@ -22,7 +22,7 @@ Also be sure, once you have cloned the repo, that you add a config.js file to th
 ```
 const config = {
   // this is the api key for pixabay
-  apiKey: '12556473-f3c29a14fbbca65ba699167e8',
+  apiKey: '',
   // optional status bar color configuration, defaults to red if undefined.
   statusBarColor: 'red',
 };
